@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
 import './App.css';
+import Wrapper from './Components/Wrapper/Wrapper'
+import Header from './Components/Header/Header'
+import Table from './Components/Table/Table'
+
 
 function App() {
+  const [search, setSearch] = useState(''); 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+    <Header 
+      search = {search}
+      setSearch = {setSearch}
+    />
+  
+    
+    <Table 
+      search = {search}
+    />
+    </Wrapper>
   );
 }
 
