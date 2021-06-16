@@ -3,7 +3,7 @@ import "./style.css";
 
 function Search ({search, setSearch}) {
     return (
-      <form className="d-flex">
+      <form className="d-flex align-middle">
         <input
           className="form-control me-2"
           type="search"

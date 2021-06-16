@@ -21,6 +21,20 @@ function Table(props) {
 
   }
 
+  function sortEmail() {
+    setIsAsc(!isAsc)  
+    if (isAsc) {
+        const newArr = [...empData];
+        newArr.sort((a, b) => a.email.localeCompare(b.email))
+        setEmpData(newArr)
+    } else {
+        const newArr = [...empData];
+        newArr.sort((a, b) => b.email.localeCompare(a.email))
+        setEmpData(newArr)
+    }
+
+  }
+
     return (
         <table className="table">
         <thead>
@@ -28,7 +42,7 @@ function Table(props) {
             <th scope="col">Picture</th>
             <th scope="col" onClick={sortName}>Name</th>
             <th scope="col">Phone</th>
-            <th scope="col">Email</th>
+            <th scope="col" onClick={sortEmail}>Email</th>
             </tr>
         </thead>
         <tbody>

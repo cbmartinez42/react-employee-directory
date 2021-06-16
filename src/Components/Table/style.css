@@ -1,2 +1,14 @@
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
+tr:nth-child(even) {
+    background: rgb(230, 230, 230)
+}
+
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+tr:hover {
+    background: rgb(141, 206, 179);
+    transition: .3s ease-in-out all;
+
+}
+
