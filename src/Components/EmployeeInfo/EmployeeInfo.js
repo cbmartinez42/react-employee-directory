@@ -1,12 +1,13 @@
 import React, {useEffect} from "react"; 
-// useState,
+import API from "../../utils/API";
 import "./style.css";
 
 function EmployeeInfo({search, empData, setEmpData}) {
 
-  const infoUrl = 'https://randomuser.me/api/?inc=name,email,phone,picture&results=25';
+  // const infoUrl = 'https://randomuser.me/api/?inc=name,email,phone,picture&results=25';
   useEffect(() => {
-    fetch(infoUrl)
+    // fetch(infoUrl)
+    API.getEmployees()
     .then(res => res.json())
     .then((response) => {
       setEmpData(response.results)

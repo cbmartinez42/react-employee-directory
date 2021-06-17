@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './App.css';
-import Wrapper from './Components/Wrapper/Wrapper'
+import Wrapper from './Components/Wrapper/Wrapper';
 import Header from './Components/Header/Header'
 import Table from './Components/Table/Table'
 
